@@ -1,2 +1,2 @@
 # project-2
-*A shell of our 2nd project
+*A shell for our 2nd project
