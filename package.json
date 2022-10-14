@@ -1,0 +1,28 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "## Project Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francisca-hernandez/project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francisca-hernandez/project-2/issues"
+  },
+  "homepage": "https://github.com/francisca-hernandez/project-2#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.2.4",
+    "sequence": "^3.0.0",
+    "session": "^0.1.0"
+  }
+}
