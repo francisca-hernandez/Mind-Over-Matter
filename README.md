@@ -35,8 +35,14 @@
 * NPM Inquirer
 * Express.js
 * Handlebars.js
+* Handlebars-express
 
 ## Assets 
+
+* UIkit
+* Google Fonts 
+* Heroku
+* postman/insomnia 
 
 (google fonts, bootstrap/bulma? or other cool css framework)
 
