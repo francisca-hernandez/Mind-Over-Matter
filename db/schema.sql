@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS moods_db;
+CREATE DATABASE moods_db;
