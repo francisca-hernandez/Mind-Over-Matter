@@ -6,7 +6,7 @@ const session = require('express-session');
 
 const sequelize = require('./config/connection');
 
-const routes = require('./controller');
+const routes = require('./controllers');
 
 // confiiguration for handlebars
 const hbs = exphbs.create({});
