@@ -1,48 +1,85 @@
-<h1>Log In or Sign Up</h1>
-<section>
-    {{!-- log in section --}}
-    <h2>Login</h2>
-    <form>
-        <div>
-            <label for="email">Email</label>
-            <input type="text" id="email">
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="text" id="password">
-        </div>
-        <div>
-            <button type="submit" id="signup-submit">Submit</button>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS FILES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/uikit@latest/dist/css/uikit.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body id='login' class="uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-light" data-uk-height-viewport>
+    <!-- /overlay -->
+    <div class="uk-position-bottom-center uk-position-small uk-visible@m uk-position-z-index">
+        <span class="uk-text-small uk-text-muted">© 2022 Breakout Room 16 Inc. - <a
+                href="https://github.com/francisca-hernandez/Mind-Over-Matter">View on Github</a> | Built with MVP in mind <a
+                href="http://getuikit.com" title="Visit UIkit 3 site" target="_blank" data-uk-tooltip><span
+                    data-uk-icon="uikit"></span></a></span>
+    </div>
+    <section class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade">
+
+        {{!-- log in section --}}
+        <h2 class="uk-text-center uk-margin">Log in</h2>
+        <form>
+            <fieldset class="uk-fieldset">
+                <div class="uk-margin-small">
+                    <div class="uk-inline uk-width-1-1">
+                        <label class="uk-margin-small" for="email">Email</label>
+                        <input class="uk-input uk-border-pill" type="text" id="email">
+                    </div>
+                </div>
+                <div class="uk-margin-small">
+                    <div class="uk-inline uk-width-1-1">
+                        <label class="uk-margin-small" for="password">Password</label>
+                        <input class="uk-input uk-border-pill" type="text" id="password">
+                    </div>
+                </div>
+                <div class="uk-margin-small">
+                    <label><input class="uk-checkbox" type="checkbox"> Keep me logged in</label>
+                </div>
+                <div class="uk-margin-bottom">
+                    <button type="submit" id="signup-submit"
+                        class="uk-button uk-button-primary uk-border-pill uk-width-1-1">LOG IN</button>
+                </div>
+            </fieldset>
+        </form>
+            <div class="uk-textlogin-logo-center uk-margin">
+            <img src="Images/login-logo.png.png" alt="Logo" width="70px" height="70px">
+            
         </div>
 
-    </form>
+    </section>
 
-</section>
+    <section>
+        {{!-- signup section --}}
+        <h2 class="uk-text-center uk-margin">Signup</h2>
+        <form id="signup-form">
+            <fieldset class="uk-fieldset">
+                <div class="uk-margin-small">
+                    <div class="uk-inline uk-width-1-1">
+                        <label class="uk-margin-small" for="name">Name</label>
+                        <input class="uk-input uk-border-pill" type="text" id="su-name">
+                    </div>
+                    <div>
+                        <label class="uk-margin-small" for="su-username">Username</label>
+                        <input class="uk-input uk-border-pill" type="text" id="su-username">
+                    </div>
+                    <div>
+                        <label class="uk-margin-small" for="su-email">Email</label>
+                        <input class="uk-input uk-border-pill" type="text" id="su-email">
+                    </div>
+                    <div>
+                        <label class="uk-margin-small" for="su-password">Password</label>
+                        <input class="uk-input uk-border-pill" type="text" id="su-password">
+                    </div>
+                    <div class="uk-margin-small">
+                        <label href><input class="uk-checkbox" type="checkbox"> I Agree to the Terms of Service</label>
+                    </div>
+                    <div>
+                        <button type="submit" id="signup-submit"
+                            class="uk-button uk-button-primary uk-border-pill uk-width-1-1">SIGN UP</button>
+                    </div>
 
-<section>
-    {{!-- signup section --}}
-    <form id="signup-form">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="su-name">
-        </div>
-        <div>
-            <label for="su-username">Username</label>
-            <input type="text" id="su-username">
-        </div>
-        <div>
-            <label for="su-email">Email</label>
-            <input type="text" id="su-email">
-        </div>
-        <div>
-            <label for="su-password">Password</label>
-            <input type="text" id="su-password">
-        </div>
-        <div>
-            <button type="submit" id="signup-submit">Submit</button>
-        </div>
-
-    </form>
-</section>
+        </form>
+    </section>
 
     <script src="/js/signUp.js"></script>
+</body>
