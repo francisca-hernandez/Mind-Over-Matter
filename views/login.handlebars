@@ -7,17 +7,10 @@
 </head>
 
 <body id='login'
-    class="uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-Dark"
+    class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-light"
     data-uk-height-viewport>
     {{>navbar}}
-    <!-- /footer -->
-    <div class="uk-position-bottom-center uk-position-small uk-position-z-index">
-        <span class="uk-text-small uk-text-muted">© 2022 Breakout Room 16 Inc. - <a
-                href="https://github.com/francisca-hernandez/Mind-Over-Matter">View on Github</a> | Built with MVP in
-            mind <a href="http://getuikit.com" title="Visit UIkit 3 site" target="_blank" data-uk-tooltip><span
-                    data-uk-icon="uikit"></span></a></span>
-    </div>
-
+    {{>footer}}
     <section class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade">
         {{!-- log in section --}}
         <h2 class="uk-text-center uk-margin">Log in</h2>
