@@ -1,0 +1,7 @@
+/* Background Image Media Queries */
+body#login {
+	background-image: url('../Images/rock-stack2.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

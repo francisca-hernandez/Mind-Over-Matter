@@ -31,5 +31,3 @@ document
   .querySelector('#signup-form')
   .addEventListener('submit', signUpFormHandler);
 
-//   Do we need a button???
-//  document.querySelector('#signUp').addEventListener('click', signUp); // similar to this? 
