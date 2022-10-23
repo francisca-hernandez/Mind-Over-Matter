@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// CREATE new user
+// CREATE new user // login 
 router.post('/', async (req, res) => {
     try {
       const dbUserData = await User.create({
@@ -23,7 +23,8 @@ router.post('/', async (req, res) => {
     }
   });
 
-// Login
+
+// Login- may not be needed
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -61,6 +62,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
 // Logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
@@ -75,5 +77,15 @@ router.post('/logout', (req, res) => {
 // I imagine I will need to GET the user info and POST the mood to their calendar with the time stamp? 
 
 
+
+// router.post('/logout', (req, res) => {
+//   if (req.session.loggedIn) {
+//     req.session.destroy(() => {
+//       res.status(204).end();
+//     });
+//   } else {
+//     res.status(404).end();
+//   }
+// });
 
 module.exports = router; 
