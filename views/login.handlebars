@@ -7,19 +7,21 @@
 </head>
 <div class="uk-background-secondary uk-flex uk-flex-top uk-flex-left">{{>navbar}}</div>
 
-<body id='login' class="uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-Dark" data-uk-height-viewport>
+<body id='login'
+    class="uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-Dark"
+    data-uk-height-viewport>
     <!-- /overlay -->
     <div class="uk-position-bottom-center uk-position-small uk-visible@m uk-position-z-index">
         <span class="uk-text-small uk-text-muted">© 2022 Breakout Room 16 Inc. - <a
-                href="https://github.com/francisca-hernandez/Mind-Over-Matter">View on Github</a> | Built with MVP in mind <a
-                href="http://getuikit.com" title="Visit UIkit 3 site" target="_blank" data-uk-tooltip><span
+                href="https://github.com/francisca-hernandez/Mind-Over-Matter">View on Github</a> | Built with MVP in
+            mind <a href="http://getuikit.com" title="Visit UIkit 3 site" target="_blank" data-uk-tooltip><span
                     data-uk-icon="uikit"></span></a></span>
     </div>
-    <section class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade">
 
+    <section class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade">
         {{!-- log in section --}}
         <h2 class="uk-text-center uk-margin">Log in</h2>
-        <form>
+        <form id="login-form">
             <fieldset class="uk-fieldset">
                 <div class="uk-margin-small">
                     <div class="uk-inline uk-width-1-1">
@@ -42,9 +44,9 @@
                 </div>
             </fieldset>
         </form>
-            <div class="uk-textlogin-logo-center uk-margin">
+        <div class="uk-textlogin-logo-center uk-margin">
             <img src="Images/login-logo.png.png" alt="Logo" width="70px" height="70px">
-            
+
 
         </div>
 
@@ -88,4 +90,3 @@
     <script src="/js/login.js"></script>
 
 </body>
-
