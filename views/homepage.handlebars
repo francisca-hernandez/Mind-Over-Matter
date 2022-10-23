@@ -1,4 +1,6 @@
 {{!-- looking to add the logo here and insert navbar partial above --}}
+
+{{#if loggedIn}}
 <h1>Welcome, to Mind over Matter</h1>
 <section>
     <h2>What was the vibe today, {{ name }}?</h2>
@@ -14,12 +16,21 @@
 
 
 {{!-- Prepping additional section --}}
-{{!-- <section>
+<section>
     <h2>Todays Notes</h2>
     <label for="todays-notes">Notes</label>
     <input type="text" id="todays-notes">
 </section>
 
 <section>
-    {{!-- Calendar to go here --}}
-</section>  --}}
+    <ul id="previous-entries">
+        {{each previous-entries}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</section> 
+{{else}}
+
+<a href="./login.handlebars"> <button> Create an Account or Sign in</button></a>
+
+{{/if}}
