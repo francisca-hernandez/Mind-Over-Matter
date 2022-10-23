@@ -1,6 +1,9 @@
 {{!-- looking to add the logo here and insert navbar partial above --}}
+
+{{#if loggedIn}}
 <h1>Welcome, to Mind over Matter</h1>
 <section>
+    {{!-- Need help with wording as well as mood options --}}
     <h2>What was the vibe today, {{ name }}?</h2>
     <label for="vibe-check">Todays Vibe</label>
     <select name="vibe-check" id="vibe-check">
@@ -14,12 +17,28 @@
 
 
 {{!-- Prepping additional section --}}
-{{!-- <section>
+<section>
+    {{!-- 
+    Will need to style input to be the size we'd like
+     --}}
     <h2>Todays Notes</h2>
     <label for="todays-notes">Notes</label>
     <input type="text" id="todays-notes">
 </section>
 
 <section>
-    {{!-- Calendar to go here --}}
-</section>  --}}
+    <ul id="previous-entries">
+        {{each previous-entries}}
+        {{!-- This depends on formatting, whether we push 
+        single inputs into individual arrays or if we push full
+        information as an object
+         --}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</section> 
+{{else}}
+
+<a href="./login.handlebars"> <button> Create an Account or Sign in</button></a>
+
+{{/if}}
