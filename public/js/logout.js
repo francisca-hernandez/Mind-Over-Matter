@@ -1,9 +1,8 @@
-// navbar option? 
+// Logout from the application
 const logout = async () => {
     const response = await fetch('/api/users/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-    //   ask about headers
     });
   
     if (response.ok) {

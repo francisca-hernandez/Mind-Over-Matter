@@ -25,6 +25,3 @@ document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
 
-//   Do we need to add anything for the button?????
-//  document.querySelector('#login').addEventListener('click', login); // similar to this? 
-
