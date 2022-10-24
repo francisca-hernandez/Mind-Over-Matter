@@ -12,27 +12,35 @@ const { User } = require('../models');
 
 
 
-// router.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, "../homepage"));
-// });
-// Homepage
-// res.render('homepage', {
-//         // moods? 
-//             loggedIn: req.session.loggedIn,
-//           })
-// });
+router.get('/', (req, res) => {
 
 
-// OR
+    res.render('login', {
+        // moods? 
+        loggedIn: req.session.loggedIn,
+    })
+});
 
-router.get('/login.js', async (req, res) => {
-    res.render('login');
-})
+router.get('/homepage', (req, res) => {
 
-router.get('/login.js', (req, res) => {
-    res.render('signup');
+
+    res.render('homepage', {
+        // moods? 
+        loggedIn: req.session.loggedIn,
+    })
 });
 
 
+    // OR
 
-module.exports = router;
+    // router.get('/login.js', async (req, res) => {
+    //     res.render('login');
+    // })
+
+    // router.get('/login.js', (req, res) => {
+    //     res.render('signup');
+    // });
+
+
+
+    module.exports = router;
