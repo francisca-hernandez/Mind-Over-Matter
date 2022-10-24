@@ -12,7 +12,6 @@ class User extends Model {
 //User Input Model 
 User.init(
     {
-
         name: {
 
             type: DataTypes.STRING,
@@ -45,17 +44,15 @@ User.init(
                 len: [8]
             }
 
-            //hooks hooks: {
-            //   async beforeCreate(newUserData) {
-            // newUserData.password = await bcrypt.hash(newUserData.password, 10);
-            // return newUserData;
-
         },
-
     },
-
-
     {
+        hooks: {
+            async beforeCreate(newUserData) {
+          newUserData.password = await bcrypt.hash(newUserData.password, 10);
+          return newUserData;
+    }
+    },
         sequelize,
         timestamps: false,
         freezeTableName: true,
