@@ -15,8 +15,11 @@ router.post('/signup', async (req, res) => {
   
       req.session.save(() => {
         req.session.loggedIn = true;
+        req.session.userId = dbUserData.get({plain: true}).id;
   
-        res.status(200).json(dbUserData);
+        res
+          .status(200)
+          .json({ user: dbUserData, message: 'You are now signed up!' });
       });
     } catch (err) {
       console.log(err);
@@ -49,7 +52,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    console.log(dbUserData);
+    // console.log(dbUserData);
 
     req.session.save(() => {
       req.session.loggedIn = true;
@@ -103,10 +106,10 @@ router.get('/mood', async (req, res) => {
         userId: req.session.userId,
       }
     })
-    // res
-    // .status(200)
-    // .json({ user: dbUserMoods, message: 'You are now logged in!' });
-    console.log(res.json({ dbUserMoods }))
+    res
+    .status(200)
+    .json({ dbUserMoods });
+    // console.log(res.json({ dbUserMoods }))
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
