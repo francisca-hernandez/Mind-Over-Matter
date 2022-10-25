@@ -14,7 +14,9 @@
         });
     // brings you to the homepage once you login
         if (response.ok) {
+
           document.location.assign('/homepage');
+
         } else {
           alert('Failed to log in.');
         }
