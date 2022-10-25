@@ -1,8 +1,10 @@
 {{!-- looking to add the logo here and insert navbar partial above --}}
+
 {{#if loggedIn}}
 <h1>Welcome, to Mind over Matter</h1>
 <button id="logout">Logout</button>
 <section>
+
     <form>
         <h2>What was the vibe today, {{ name }}?</h2>
         <label for="vibe-check">Todays Vibe</label>
@@ -15,18 +17,22 @@
         </select>
         <button id="submit-mood">Submit</button>
     </form>
+
 </section>
 {{/if}}
 
 {{!-- Prepping additional section --}}
-{{!-- <section>
+<section>
+    {{!-- 
+    Will need to style input to be the size we'd like
+     --}}
     <h2>Todays Notes</h2>
     <label for="todays-notes">Notes</label>
     <input type="text" id="todays-notes">
 </section>
 
-<section>
-    {{!-- Calendar to go here --}}
-</section>
---}}
+
+
     <script src="/js/logout.js"></script>
+
+   
