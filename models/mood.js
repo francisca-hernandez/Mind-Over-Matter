@@ -1,13 +1,10 @@
-// const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 // const bcrypt = require('bcryptjs');
-const { User } = require('./User');
+// const { User } = require('./User');
 const sequelize = require('../config/connection');
 
+class Moods extends Model{
 
-class Moods extends User {
-    static get tableName() {
-    return'moods';
-    }
 }
 
 // ask question about how to set the moods id = to what the user's primaryKey is
@@ -23,10 +20,13 @@ Moods.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        dateCreated: {
-            type: DataTypes.DATE,
+        userId: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-            unique: true
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         }
 
     },

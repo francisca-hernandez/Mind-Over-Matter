@@ -7,7 +7,7 @@ const moodFormHandler = async (event) => {
         // I believe this is a situation in which we will need to utilize a wild card
         // so we will have to set up routes for the wildcard where user = user where id = id then
         // saving moods should be easier.
-        const response = await fetch('/api/users/?/mood', {
+        const response = await fetch('/api/users/mood', {
             method: 'POST',
             body: JSON.stringify({ mood }),
             headers: { 'Content-Type': 'application/json' },
@@ -21,3 +21,6 @@ const moodFormHandler = async (event) => {
     }
 };
 
+document
+.querySelector('#mood-form')
+.addEventListener('submit', moodFormHandler);
