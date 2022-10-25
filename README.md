@@ -1,8 +1,8 @@
-# Project 2 Name 
+# Mind Over Matter
 
 ## Project Description
 
-* Project 2 Description
+* Mental Health and Wellness Tracking Application. 
 
 ## Acceptance Criteria
 
@@ -23,15 +23,29 @@
 
 ## How to Use 
 
-* 
+### Installation instructions
+
+Option 1
+* download or clone the code from the repository - [Click Here for the Respository!](https://github.com/francisca-hernandez/Mind-Over-Matter)
+* Must have node.js and mysql installed
+* In your COMMAND LINE after downloading/cloning the file you want to run the following command: 
+
+    $ npm init -y
+    $ npm install
+    $ npm start OR $ nodemon server 
+    * there are more steps - like setting up the database? running
+
+Option 2 
+* Click the following link [Mind Over Matter]()
  
 ## Built Using
 
 * JavaScript
-* HTML
+* HTML (via handlebars.js)
 * CSS 
 * Node.js
 * Node Package Manager
+* Sequelize
 * NPM Inquirer
 * Express.js
 * Handlebars.js
@@ -40,22 +54,18 @@
 ## Assets 
 
 * UIkit
-* Google Fonts 
+* Unsplash 
 * Heroku
-* postman/insomnia 
-
-(google fonts, bootstrap/bulma? or other cool css framework)
+* Postman
+* MySQLWorkbench  
 
 ### Screenshot 
 
 
+
 ### Link to Deployed Application
 
-* Respository Link 
-
-* Heroku  
-
-This site was build using [Github Pages]()
+This site was build using [Github Respository]() & deployed using [Heroku]()
 
 ## Contributers
 
