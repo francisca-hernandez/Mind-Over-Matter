@@ -27,6 +27,7 @@ router.get('/homepage', (req, res) => {
     res.render('homepage', {
         // moods? 
         loggedIn: req.session.loggedIn,
+        moods: req.session.mood
     })
 });
 

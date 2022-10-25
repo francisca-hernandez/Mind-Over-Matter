@@ -16,6 +16,10 @@ Moods.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        mood: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
 
     },
     {
