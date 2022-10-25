@@ -8,7 +8,7 @@
     {{>navbar}}
     {{>banner}}
 
-    {{!-- {{#if loggedIn}} --}}
+    {{#if loggedIn}}
 
     <section class="uk-section uk-section-dark">
         <div class="uk-container uk-flex uk-flex-center">
@@ -16,7 +16,7 @@
                 <div>
                     <h3 class="uk-heading-line uk-text-bold"><span>Vibe Check</span></h3>
                     <article class="uk-section uk-section-small uk-padding-remove-top">
-                        <form>
+                        <form id="mood-form">
                             <h2>What was the vibe today,{{ name }}?
                             </h2>
                             <select class="uk-border-pill uk-width-1-4" name="vibe-check" id="vibe-check">
@@ -92,6 +92,8 @@
             </div>
         </div>
     </section>
+
+    {{/if}}
 
  {{>footer}}
  <script src="/js/logout.js"></script>
