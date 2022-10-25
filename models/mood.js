@@ -1,29 +1,44 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcryptjs');
+// const { Model, DataTypes } = require('sequelize');
+// const bcrypt = require('bcryptjs');
+const { User } = require('./User');
 const sequelize = require('../config/connection');
 
-Mood.init (
 
-    text: {
+class Moods extends User {
+    static get tableName() {
+    return'moods';
+    }
+}
 
+// ask question about how to set the moods id = to what the user's primaryKey is
 
-        type: DataTypes.STRING,
-        allowNull: false,
-
+Moods.init(
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        mood: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        dateCreated: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            unique: true
+        }
 
     },
-    
     {
         sequelize,
-        timestamps: false,
+        tableName:'moods',
         freezeTableName: true,
-        underscored: true,
-        modelName: 'mood'
     }
+)
+
+// this is calling the array from userMoodAR to disply to the html to user 
+
+module.exports = Moods; 
 
 
-
-);
-
-
-    module.exports = Mood;

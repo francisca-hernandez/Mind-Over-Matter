@@ -2,19 +2,24 @@
 
 {{#if loggedIn}}
 <h1>Welcome, to Mind over Matter</h1>
+<button id="logout">Logout</button>
 <section>
-    {{!-- Need help with wording as well as mood options --}}
-    <h2>What was the vibe today, {{ name }}?</h2>
-    <label for="vibe-check">Todays Vibe</label>
-    <select name="vibe-check" id="vibe-check">
-        <option value="Happy">Happy</option>
-        <option value="Angry">Angry</option>
-        <option value="Sad">Sad</option>
-        <option value="Irritable">Irritable</option>
-        <option value="Tired">Tired</option>
-    </select>
-</section>
 
+    <form>
+        <h2>What was the vibe today, {{ name }}?</h2>
+        <label for="vibe-check">Todays Vibe</label>
+        <select name="vibe-check" id="vibe-check">
+            <option value="Happy">Happy</option>
+            <option value="Angry">Angry</option>
+            <option value="Sad">Sad</option>
+            <option value="Irritable">Irritable</option>
+            <option value="Tired">Tired</option>
+        </select>
+        <button id="submit-mood">Submit</button>
+    </form>
+
+</section>
+{{/if}}
 
 {{!-- Prepping additional section --}}
 <section>
@@ -26,19 +31,8 @@
     <input type="text" id="todays-notes">
 </section>
 
-<section>
-    <ul id="previous-entries">
-        {{each previous-entries}}
-        {{!-- This depends on formatting, whether we push 
-        single inputs into individual arrays or if we push full
-        information as an object
-         --}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-</section> 
-{{else}}
 
-<a href="./login.handlebars"> <button> Create an Account or Sign in</button></a>
 
-{{/if}}
+    <script src="/js/logout.js"></script>
+
+   

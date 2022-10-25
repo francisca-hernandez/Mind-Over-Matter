@@ -1,27 +1,47 @@
 const router = require('express').Router();
-var session = require('express-session');
-// const { user, mood } = require('../models');
+const { User } = require('../models');
+
+// GEt ROUTES
+
 
 // SignUp/Login
+
+
+
+
+
+
+
 router.get('/', (req, res) => {
-    res.render('login');
-// Homepage
-// res.render('homepage', {
-//             // moods? 
-//             loggedIn: req.session.loggedIn,
-//           })
+
+
+    res.render('login', {
+        // moods? 
+        loggedIn: req.session.loggedIn,
+    })
+});
+
+router.get('/homepage', (req, res) => {
+
+
+    res.render('homepage', {
+        // moods? 
+        loggedIn: req.session.loggedIn,
+        moods: req.session.mood
+    })
 });
 
 
-// OR
+    // OR
 
-// router.get('/', (req, res) => {
-//     res.render('homepage', {
-//         // moods? 
-//         loggedIn: req.session.loggedIn,
-//       })
-// });
+    // router.get('/login.js', async (req, res) => {
+    //     res.render('login');
+    // })
+
+    // router.get('/login.js', (req, res) => {
+    //     res.render('signup');
+    // });
 
 
 
-module.exports = router;
+    module.exports = router;
