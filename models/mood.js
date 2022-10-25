@@ -21,6 +21,11 @@ Moods.init(
         mood: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        dateCreated: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            unique: true
         }
 
     },
