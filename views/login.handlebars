@@ -1,75 +1,83 @@
 {{>header}}
 
 <body id='login'
-    class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-light"
+    class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-height-viewport uk-overflow-hidden uk-light"
     data-uk-height-viewport>
+
     {{>navbar}}
-    
-    <section class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade">
-        {{!-- log in section --}}
-        <h2 class="uk-text-center uk-margin">Log in</h2>
-        <form id="login-form">
-            <fieldset class="uk-fieldset">
-                <div class="uk-margin-small">
-                    <div class="uk-inline uk-width-1-1">
-                        <label class="uk-margin-small" for="email">Email</label>
-                        <input class="uk-input uk-border-pill" type="text" id="email">
-                    </div>
-                </div>
-                <div class="uk-margin-small">
-                    <div class="uk-inline uk-width-1-1">
-                        <label class="uk-margin-small" for="password">Password</label>
-                        <input class="uk-input uk-border-pill" type="text" id="password">
-                    </div>
-                </div>
-                <div class="uk-margin-small">
-                    <label><input class="uk-checkbox" type="checkbox"> Keep me logged in</label>
-                </div>
-                <div class="uk-margin-bottom">
-                    <button type="submit" id="signup-submit"
-                        class="uk-button uk-button-primary uk-border-pill uk-width-1-1">LOG IN</button>
-                </div>
-            </fieldset>
-        </form>
-        <div class="uk-textlogin-logo-center uk-margin">
-            <img src="Images/login-logo.png.png" alt="Logo" width="70px" height="70px">
+    {{>banner}}
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-middle uk-flex-center">
+            <section class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade">
+                {{!-- log in section --}}
+                <h2 class="uk-text-center uk-margin">Log in</h2>
+                <form id="login-form">
+                    <fieldset class="uk-fieldset">
+                        <div class="uk-margin-small">
+                            <div class="uk-inline uk-width-1-1">
+                                <label class="uk-margin-small" for="email">Email</label>
+                                <input class="uk-input uk-border-pill" type="text" id="email">
+                            </div>
+                        </div>
+                        <div class="uk-margin-small">
+                            <div class="uk-inline uk-width-1-1">
+                                <label class="uk-margin-small" for="password">Password</label>
+                                <input class="uk-input uk-border-pill" type="text" id="password">
+                            </div>
+                        </div>
+                        <div class="uk-margin-small">
+                            <label><input class="uk-checkbox" type="checkbox"> Keep me logged in</label>
+                        </div>
+                        <div class="uk-margin-bottom">
+                            <button type="submit" id="signup-submit"
+                                class="uk-button uk-button-primary uk-border-pill uk-width-1-1">LOG IN</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="uk-textlogin-logo-center uk-margin">
+                    <img src="Images/login-logo.png.png" alt="Logo" width="70px" height="70px">
 
 
+                </div>
+
+            </section>
+
+            <section>
+                {{!-- signup section --}}
+                <h2 class="uk-text-center uk-margin">Signup</h2>
+                <form id="signup-form">
+                    <fieldset class="uk-fieldset">
+                        <div class="uk-margin-small">
+                            <div class="uk-inline uk-width-1-1">
+                                <label class="uk-margin-small" for="name">Name</label>
+                                <input class="uk-input uk-border-pill" type="text" id="su-name">
+                            </div>
+                            <div>
+                                <label class="uk-margin-small" for="su-username">Username</label>
+                                <input class="uk-input uk-border-pill" type="text" id="su-username">
+                            </div>
+                            <div>
+                                <label class="uk-margin-small" for="su-email">Email</label>
+                                <input class="uk-input uk-border-pill" type="text" id="su-email">
+                            </div>
+                            <div>
+                                <label class="uk-margin-small" for="su-password">Password</label>
+                                <input class="uk-input uk-border-pill" type="text" id="su-password">
+                            </div>
+                            <div class="uk-margin-small">
+                                <label href><input class="uk-checkbox" type="checkbox"> I Agree to the Terms of
+                                    Service</label>
+                            </div>
+                            <div>
+                                <button type="submit" id="signup-submit"
+                                    class="uk-button uk-button-primary uk-border-pill uk-width-1-1">SIGN UP</button>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </form>
+            </section>
         </div>
-
-    </section>
-
-    <section>
-        {{!-- signup section --}}
-        <h2 class="uk-text-center uk-margin">Signup</h2>
-        <form id="signup-form">
-            <fieldset class="uk-fieldset">
-                <div class="uk-margin-small">
-                    <div class="uk-inline uk-width-1-1">
-                        <label class="uk-margin-small" for="name">Name</label>
-                        <input class="uk-input uk-border-pill" type="text" id="su-name">
-                    </div>
-                    <div>
-                        <label class="uk-margin-small" for="su-username">Username</label>
-                        <input class="uk-input uk-border-pill" type="text" id="su-username">
-                    </div>
-                    <div>
-                        <label class="uk-margin-small" for="su-email">Email</label>
-                        <input class="uk-input uk-border-pill" type="text" id="su-email">
-                    </div>
-                    <div>
-                        <label class="uk-margin-small" for="su-password">Password</label>
-                        <input class="uk-input uk-border-pill" type="text" id="su-password">
-                    </div>
-                    <div class="uk-margin-small">
-                        <label href><input class="uk-checkbox" type="checkbox"> I Agree to the Terms of Service</label>
-                    </div>
-                    <div>
-                        <button type="submit" id="signup-submit"
-                            class="uk-button uk-button-primary uk-border-pill uk-width-1-1">SIGN UP</button>
-                    </div>
-
-        </form>
     </section>
     {{>footer}}
 
