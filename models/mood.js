@@ -9,6 +9,8 @@ class Moods extends User {
     }
 }
 
+// ask question about how to set the moods id = to what the user's primaryKey is
+
 Moods.init(
     {
         id: {
@@ -30,3 +32,5 @@ Moods.init(
 )
 
 // this is calling the array from userMoodAR to disply to the html to user 
+
+module.exports = Moods; 

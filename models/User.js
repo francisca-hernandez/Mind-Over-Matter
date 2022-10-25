@@ -27,7 +27,8 @@ User.init(
             validate: {
                 isEmail: true
 
-            }
+            },
+            primaryKey: true
         },
 
         username: {
