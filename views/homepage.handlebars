@@ -1,38 +1,112 @@
-{{!-- looking to add the logo here and insert navbar partial above --}}
 
-{{#if loggedIn}}
-<h1>Welcome, to Mind over Matter</h1>
-<button id="logout">Logout</button>
-<section>
+{{>header}}
 
-    <form>
-        <h2>What was the vibe today, {{ name }}?</h2>
-        <label for="vibe-check">Todays Vibe</label>
-        <select name="vibe-check" id="vibe-check">
-            <option value="Happy">Happy</option>
-            <option value="Angry">Angry</option>
-            <option value="Sad">Sad</option>
-            <option value="Irritable">Irritable</option>
-            <option value="Tired">Tired</option>
-        </select>
-        <button id="submit-mood">Submit</button>
-    </form>
+<body id='login'
+    class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-height-viewport uk-overflow-hidden uk-light"
+    data-uk-height-viewport>
+
+    {{>navbar}}
+    {{>banner}}
+
+    {{#if loggedIn}}
+    <section class="uk-section uk-section-medium">
+        <div class="uk-container uk-margin-top">
+            <div class="uk-height-large uk-cover-container uk-border-rounded">
+                <img src="https://picsum.photos/1300/500/?random" alt="Alt img" data-uk-cover>
+                <div
+                    class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-flex-middle uk-light uk-text-center">
+                    <div data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+                        <img src="../public/Images/login-logo.png.png" alt="Logo" width="100h" height="100h">
+                        <h1 class="uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent">Welcome, to Mind over
+                            Matter</h1>
+                        <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-center">
+            <div class="uk-width-expand">
+                <div>
+                    <h3 class="uk-heading-line uk-text-bold"><span>Vibe Check</span></h3>
+                    <article class="uk-section uk-section-small uk-padding-remove-top">
+                        <form>
+                            <h2>What was the vibe today,{{ name }}?
+                            </h2>
+                            <select class="uk-border-pill uk-width-1-4" name="vibe-check" id="vibe-check">
+                                <option value="Happy">Happy</option>
+                                <option value="Angry">Angry</option>
+                                <option value="Sad">Sad</option>
+                                <option value="Irritable">Irritable</option>
+                                <option value="Tired">Tired</option>
+                            </select>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </section>
-{{/if}}
-
-{{!-- Prepping additional section --}}
-<section>
-    {{!-- 
-    Will need to style input to be the size we'd like
-     --}}
-    <h2>Todays Notes</h2>
-    <label for="todays-notes">Notes</label>
-    <input type="text" id="todays-notes">
-</section>
 
 
+   {{!-- Questions --}}
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-center">
+            <div class="uk-width-expand">
+                <div>
+                    <h3 class="uk-heading-line uk-text-bold"><span>Daily Questions</span></h3>
+                    <article class="uk-section uk-section-small uk-padding-remove-top">
+                        <header>
+                            <h2>Explain why or what events led you to feel this way?</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <h2>Today I accomplished...</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <h2>I had a positive experience with...</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <h2>Where did I make progress in my life?</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <h2>Why am I grateful to myself today?</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <h2>Today I accomplished...</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <h2>How did today add value to my life?</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                        </header>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="/js/logout.js"></script>
-
-   
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-center">
+            <div class="uk-width-expand">
+                <div>
+                    <h3 class="uk-heading-line uk-text-bold"><span>Reflections</span></h3>
+                    <article class="uk-section uk-section-small uk-padding-remove-top">
+                        <header>
+                            <h2>Tell us about your day</h2>
+                            <label for="todays-notes">Notes</label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <button class="uk-margin-top uk-button uk-button-secondary uk-border-pill uk-width-1-1"> Submit Entry</button>
+                        </header>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+ {{>footer}}
+ <script src="/js/logout.js"></script>
+</body>
