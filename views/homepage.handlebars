@@ -3,7 +3,7 @@
 <h1>Welcome, to Mind over Matter</h1>
 <button id="logout">Logout</button>
 <section>
-    <form>
+    <form id="mood-form">
         <h2>What was the vibe today, {{ name }}?</h2>
         <label for="vibe-check">Todays Vibe</label>
         <select name="vibe-check" id="vibe-check">
@@ -13,7 +13,7 @@
             <option value="Irritable">Irritable</option>
             <option value="Tired">Tired</option>
         </select>
-        <button id="submit-mood">Submit</button>
+        <button type="submit" id="submit-mood">Submit</button>
     </form>
 </section>
 {{/if}}
@@ -30,3 +30,4 @@
 </section>
 --}}
     <script src="/js/logout.js"></script>
+    <script src="/js/mood.js"></script>

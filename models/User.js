@@ -12,6 +12,12 @@ class User extends Model {
 //User Input Model 
 User.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+            unique: true,
+        },
         name: {
 
             type: DataTypes.STRING,
@@ -34,7 +40,6 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
-            primaryKey: true
         },
 
         password: {

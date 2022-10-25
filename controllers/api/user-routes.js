@@ -1,6 +1,6 @@
 // needs to be filled in with create new user and login and logout
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Moods } = require('../../models');
 
 // POST ROUTES
 // CREATE new user 
@@ -49,13 +49,17 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    console.log(dbUserData);
+
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.userId = dbUserData.get({plain: true}).id;
 
       res
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -71,6 +75,41 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.post('/mood', async (req, res) => {
+  try {
+    const dbUserMood = await Moods.create({
+      mood: req.body.mood,
+      userId: req.session.userId
+    });
+
+    // req.session.save(() => {
+    //   req.session.loggedIn = true;
+
+    //   res.status(200).json(dbUserMood);
+    // });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/mood', async (req, res) => {
+  try {
+    const dbUserMoods = await Moods.findAll({
+      where: {
+        userId: req.session.userId,
+      }
+    })
+    // res
+    // .status(200)
+    // .json({ user: dbUserMoods, message: 'You are now logged in!' });
+    console.log(res.json({ dbUserMoods }))
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
