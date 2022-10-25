@@ -1,7 +1,14 @@
 {{>header}}
 
-<body>
+<body id='login'
+    class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-height-viewport uk-overflow-hidden uk-light"
+    data-uk-height-viewport>
+
     {{>navbar}}
+
+    {{!-- {{#if loggedIn}} --}}
+    
+    {{>banner}}
 
     <section>
         <ul id="previous-entries">
@@ -20,4 +27,5 @@
 
     {{/if}}
     {{>footer}}
+    <script src="/js/logout.js"></script>
 </body>
