@@ -1,5 +1,5 @@
-const User = require('user');
-const Moods = require('mood')
+const User = require('./models/user');
+const Moods = require('./models/mood')
 
 module.exports= {
     User,
