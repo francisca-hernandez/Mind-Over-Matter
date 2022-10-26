@@ -108,7 +108,7 @@ router.get('/mood', async (req, res) => {
     })
     res
     .status(200)
-    .json({ dbUserMoods });
+    .json(dbUserMoods);
     // console.log(res.json({ dbUserMoods }))
   } catch (err) {
     console.log(err);
