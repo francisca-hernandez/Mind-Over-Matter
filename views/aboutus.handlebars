@@ -76,7 +76,12 @@
         </section>
     </div>
 
+{{#if loggedIn}}
+    {{else}}
 
+
+    {{>tosignin}}
+    {{/if}}
     
     {{>footer}}
  <script src="/js/logout.js"></script>
