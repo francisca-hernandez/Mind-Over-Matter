@@ -10,22 +10,15 @@
     
     {{>banner}}
 
-    <section>
-        <ul id="previous-entries">
-            {{each previous-entries}}
-            {{!-- This depends on formatting, whether we push
-            single inputs into individual arrays or if we push full
-            information as an object
-            --}}
-            <li>{{this}}</li>
-            {{/each}}
-        </ul>
-    </section>
+    <section id="mood-container"></section>
     {{else}}
 
     <a href="./login.handlebars"> <button> Create an Account or Sign in</button></a>
 
     {{/if}}
+   
     {{>footer}}
     <script src="/js/logout.js"></script>
+    <script src="/js/entries.js"></script>
+   <script src="/js/navbar.js"></script>
 </body>

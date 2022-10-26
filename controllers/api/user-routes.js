@@ -69,7 +69,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
 // Logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
@@ -87,12 +86,6 @@ router.post('/mood', async (req, res) => {
       mood: req.body.mood,
       userId: req.session.userId
     });
-
-    // req.session.save(() => {
-    //   req.session.loggedIn = true;
-
-    //   res.status(200).json(dbUserMood);
-    // });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -109,13 +102,11 @@ router.get('/mood', async (req, res) => {
     res
     .status(200)
     .json({ dbUserMoods });
-    // console.log(res.json({ dbUserMoods }))
+    console.log(res.json({ dbUserMoods }))
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
-
-// I imagine I will need to GET the user info and POST the mood to their calendar with the time stamp?
 
 module.exports = router; 

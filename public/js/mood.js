@@ -14,7 +14,7 @@ const moodFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.assign('/homepage');
+            document.location.assign('/entries');
         } else {
             alert('Failed to save mood');
         }
@@ -23,4 +23,7 @@ const moodFormHandler = async (event) => {
 
 document
 .querySelector('#mood-form')
-.addEventListener('submit', moodFormHandler);
+// .addEventListener('submit', moodFormHandler);
+
+
+
