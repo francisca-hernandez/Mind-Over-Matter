@@ -16,7 +16,7 @@
                     <h3 class="uk-heading-line uk-text-bold"><span>Vibe Check</span></h3>
                     <article class="uk-section uk-section-small uk-padding-remove-top">
                         <form id="mood-form">
-                            <h2>What was the vibe today,{{ name }}?
+                            <h2>What was the vibe today{{ name }}?
                             </h2>
                             <select class="uk-width-1-1 uk-text-large uk-txt-bold" uk-dropdown="mode: click" name="vibe-check" id="vibe-check">
                                 <option value="Happy">Happy</option>
@@ -39,14 +39,7 @@
     </section>
 
     </section>
-    {{!-- Daily Moods --}}
-    <section class="uk-section uk-section-dark">
-        <div class="uk-container uk-flex uk-flex-center">
-            <div class="uk-width-expand">
-                <div id="mood-container"></div>
-            </div>
-        </div>
-    </section>
+
     {{!-- Questions --}}
     <section class="uk-section uk-section-dark">
         <div class="uk-container uk-flex uk-flex-center">
