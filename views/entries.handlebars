@@ -1,3 +1,4 @@
+
 {{>header}}
 
 <body id='login'
@@ -5,21 +6,26 @@
     data-uk-height-viewport>
 
     {{>navbar}}
-
-    {{#if loggedIn}}
-    
     {{>banner}}
 
-    <section>
-        <ul id="mood">
-            {{each previous-entries}}
-            {{!-- This depends on formatting, whether we push
-            single inputs into individual arrays or if we push full
-            information as an object
-            --}}
-            <li>{{this}}</li>
-            {{/each}}
-        </ul>
+    {{#if loggedIn}}
+
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-center">
+            <div class="uk-width-expand">
+                <div>
+                    <h3 class="uk-heading-line uk-text-bold"><span>Reflections</span></h3>
+                    <article class="uk-section uk-section-small uk-padding-remove-top">
+                        <header>
+                            <h2>Tell us about your day</h2>
+                            <label for="todays-notes">Notes</label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <button class="uk-margin-top uk-button uk-button-secondary uk-width-1-4"> Submit Entry</button>
+                        </header>
+                    </article>
+                </div>
+            </div>
+        </div>
     </section>
     {{else}}
 
@@ -28,6 +34,10 @@
             in</button></a>
 
     {{/if}}
-    {{>footer}}
-    <script src="/js/logout.js"></script>
+
+ {{>footer}}
+
+ <script src="/js/logout.js"></script>
+ <script src="/js/mood.js"></script>
+
 </body>
