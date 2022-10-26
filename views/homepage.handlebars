@@ -7,7 +7,7 @@
     {{>navbar}}
     {{>banner}}
 
-    {{!-- {{#if loggedIn}} --}}
+    {{#if loggedIn}}
 
     <section class="uk-section uk-section-dark">
         <div class="uk-container uk-flex uk-flex-center">
@@ -15,10 +15,10 @@
                 <div>
                     <h3 class="uk-heading-line uk-text-bold"><span>Vibe Check</span></h3>
                     <article class="uk-section uk-section-small uk-padding-remove-top">
-                        <form>
+                        <form id="mood-form">
                             <h2>What was the vibe today,{{ name }}?
                             </h2>
-                            <select class="uk-border-pill uk-width-1-4" name="vibe-check" id="vibe-check">
+                            <select class="uk-width-1-1 uk-text-large uk-txt-bold" uk-dropdown="mode: click" name="vibe-check" id="vibe-check">
                                 <option value="Happy">Happy</option>
                                 <option value="">Tired</option>
                                 <option value="Angry">Angry</option>
@@ -27,8 +27,9 @@
                                 <option value="Tired">Tired</option>
                                 <option value="Anxious">Anxious</option>
                             </select>
-                            <button class="uk-margin-top uk-button uk-button-secondary uk-border-pill uk-width-1-1"
-                                type="submit" id="submit-mood">Submit</button>
+
+                                <button class="uk-margin-top uk-button-small uk-button-default uk-width-1-1 uk-text-large uk-txt-bold" type="submit" id="submit-mood">Confirm Vibe</button>
+
 
                         </form>
                     </article>
@@ -81,18 +82,26 @@
                             <h2>Tell us about your day</h2>
                             <label for="todays-notes">Notes</label>
                             <textarea class="uk-textarea" rows="3"></textarea>
-                            <button class="uk-margin-top uk-button uk-button-secondary uk-border-pill uk-width-1-1">
-                                Submit Entry</button>
+
+                            <button class="uk-margin-top uk-button uk-button-secondary uk-width-1-4"> Submit Entry</button>
+
                         </header>
                     </article>
                 </div>
             </div>
         </div>
     </section>
+    {{else}}
 
-    {{>footer}}
+    {{>tosignin}}
+
+    {{/if}}
+
+
+    {{>footer}} 
     <script src="/js/logout.js"></script>
     <script src="/js/mood.js"></script>
     <script src="/js/entries.js"></script>
+
 
 </body>

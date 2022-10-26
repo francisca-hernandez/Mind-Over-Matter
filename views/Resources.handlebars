@@ -5,15 +5,30 @@
     data-uk-height-viewport>
 
     {{>navbar}}
-
-    {{!-- {{#if loggedIn}} --}}
-
     {{>banner}}
 
-    <div>
+    
 
+    <div>
+        <section class="uk-section uk-section-dark">
+            <div class="uk-container uk-flex uk-flex-center">
+                <div class="uk-width-expand">
+                    <div>
+                        <h1 class="uk-heading-line uk-text-bold"><span>Suicide Prevention Hotline</span></h1>
+                        <article class="uk-section uk-section-small uk-padding-remove-top">
+                                <h1><a href="tel:">1-800-273-8255</a></h1>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
+
+
+    <a href="./login.handlebars"> <button
+            class="uk-margin-top uk-button uk-button-secondary uk-border-pill uk-width-1-4"> Create an Account or Sign
+            in</button></a>
     {{>footer}}
  <script src="/js/logout.js"></script>
 </body>

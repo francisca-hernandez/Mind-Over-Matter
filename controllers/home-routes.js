@@ -31,6 +31,28 @@ router.get('/homepage', (req, res) => {
     })
 });
 
+router.get('/entries', function(req, res) {
+    
+    res.render('entries', {
+        loggedIn: req.session.loggedIn,
+        moods: req.session.mood
+    });
+  });
+  router.get('/aboutus', function(req, res) {
+    
+    res.render('aboutus', {
+        loggedIn: req.session.loggedIn,
+        moods: req.session.mood
+    });
+  });
+  router.get('/resources', function(req, res) {
+    
+    res.render('resources', {
+        loggedIn: req.session.loggedIn,
+        moods: req.session.mood
+    });
+  });
+
 
     // OR
 
