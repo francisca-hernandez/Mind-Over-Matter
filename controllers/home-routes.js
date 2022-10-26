@@ -12,7 +12,7 @@ const { User } = require('../models');
 
 
 
-router.get('/', (req, res) => {
+router.get('https://git.heroku.com/mind-over-matter-2.git', (req, res) => {
 
 
     res.render('login', {
