@@ -1,10 +1,29 @@
-{{>header}}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mind Over Matter</title>
+    <link rel="icon" href="Images/login-logo.png.png">
+    <!-- CSS FILES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/uikit@latest/dist/css/uikit.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+</head>
 
 <body id='login'
     class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-height-viewport uk-overflow-hidden uk-light uk-flex uk-flex-center uk-flex-middle"
     data-uk-height-viewport>
 
-    {{>navbar}}
+    <nav class=".uk-navbar-container uk-navbar-transparent uk-position-top-left uk-position-z-index" uk-navbar>
+        <div class="uk-navbar-left">
+             <a></a>
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="">homepage</a></li>
+                <li class="uk-active"><a href="">Entries</a></li>
+                <li class="uk-active"><a href="">about us</a></li>
+                <li class="uk-active"><a href="">Resources</a></li>
+                <li id="logout" class="uk-active"><a href="">logout</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
     <div>
@@ -78,6 +97,11 @@
 
 
     
-    {{>footer}}
+    <div class="uk-position-bottom-center uk-position-small">
+        <span class="uk-text-small uk-text-muted">© 2022 Breakout Room 16 Inc. - <a
+                href="https://github.com/francisca-hernandez/Mind-Over-Matter">View on Github</a> | Built with MVP in
+            mind <a href="http://getuikit.com" title="Visit UIkit 3 site" target="_blank" data-uk-tooltip><span
+                    data-uk-icon="uikit"></span></a></span>
+    </div>
  <script src="/js/logout.js"></script>
 </body>
