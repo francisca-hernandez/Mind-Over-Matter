@@ -30,24 +30,9 @@ User Story
 
 ## How to Use 
 
-### Option 1: Heroku Link
+### Heroku Link
 
 [Click here for the Heroku deployment!](https://mind-over-matter-2.herokuapp.com/)
-
-### Option 2: GitHub Repository Clone
-
-* Step 1 - [Clone this Github Respository](https://github.com/francisca-hernandez/Mind-Over-Matter)
-
-* Step 2 -
-
-* Step 3 - 
-
-* Step 4 - 
-
-* Step 5 -
-
-* Step 6 -
-
  
 ## Built Using
 
