@@ -1,0 +1,88 @@
+{{>header}}
+
+<body id='login'
+    class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-height-viewport uk-overflow-hidden uk-light uk-flex uk-flex-center uk-flex-middle"
+    data-uk-height-viewport>
+
+    {{>navbar}}
+
+
+    <div>
+        <section class="uk-section uk-section-dark">
+            <div class="uk-container uk-flex uk-flex-center">
+                <div class="uk-width-expand">
+                    <div>
+                        <h3 class="uk-heading-line uk-text-bold"><span>Gigi</span></h3>
+                        <article class="uk-section uk-section-small uk-padding-remove-top">
+                            <img src="/Images/gigi.jpeg" alt="Gigi" width="150px" height="150px">
+                                <h2>Lead Dev -Routes.js</h2>
+                                <h3><a href="https://github.com/Gdebortoli"> Github</a></h3>
+                                <h3><a href=""> Portfolio</a></h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section class="uk-section uk-section-dark">
+            <div class="uk-container uk-flex uk-flex-center">
+                <div class="uk-width-expand">
+                    <div>
+                        <h3 class="uk-heading-line uk-text-bold"><span>Francisca</span></h3>
+                        <article class="uk-section uk-section-small uk-padding-remove-top">
+                            <img src="/Images/fran.png" alt="Fransisca" width="150px" height="150px">
+                            <h2>Lead Dev -Models.js</h2>
+                            <h3><a href="https://github.com/francisca-hernandez"> Github</a></h3>
+                            <h3><a href=""> Portfolio</a></h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section class="uk-section uk-section-dark">
+            <div class="uk-container uk-flex uk-flex-center">
+                <div class="uk-width-expand">
+                    <div>
+                        <h3 class="uk-heading-line uk-text-bold"><span>Joseph</span></h3>
+                        <article class="uk-section uk-section-small uk-padding-remove-top">
+                            <img src="/Images/joe.jpg" alt="Joseph" width="150px" height="150px">
+                            <h2>Lead Dev -mysql</h2>
+                            <h3><a href="https://github.com/jrhscoding"> Github</a></h3>
+                            <h3><a href=""> Portfolio</a></h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section class="uk-section uk-section-dark">
+            <div class="uk-container uk-flex uk-flex-center">
+                <div class="uk-width-expand">
+                    <div>
+                        <h3 class="uk-heading-line uk-text-bold"><span>David</span></h3>
+                        <article class="uk-section uk-section-small uk-padding-remove-top">
+                            <img src="/Images/david.jpg" alt="David" width="150px" height="150px">
+                            <h2>Lead Dev -Css</h2>
+                            <h3><a href="https://github.com/DavidRicksgers"> Github</a></h3>
+                            <h3><a href=""> Portfolio</a></h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{{#if loggedIn}}
+    {{else}}
+
+
+    {{>tosignin}}
+    {{/if}}
+    
+    {{>footer}}
+ <script src="/js/logout.js"></script>
+</body>

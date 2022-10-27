@@ -1,0 +1,33 @@
+
+{{>header}}
+
+<body id='login'
+    class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-height-viewport uk-overflow-hidden uk-light"
+    data-uk-height-viewport>
+
+    {{>navbar}}
+    {{>banner}}
+
+    {{#if loggedIn}}
+
+   {{!-- Daily Moods --}}
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-center">
+            <div class="uk-width-expand">
+                <div id="mood-container"></div>
+            </div>
+        </div>
+    </section>
+    {{else}}
+
+    {{>tosignin}}
+
+    {{/if}}
+
+ {{>footer}}
+
+ <script src="/js/logout.js"></script>
+ <script src="/js/mood.js"></script>
+ <script src="/js/entries.js"></script>
+
+</body>

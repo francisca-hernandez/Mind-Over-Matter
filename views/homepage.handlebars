@@ -1,1 +1,100 @@
-<h1>This is displaying the homepage</h1>
+{{>header}}
+
+<body id='login'
+    class="uk-cover-container uk-background-blend-overlay uk-background-secondary uk-height-viewport uk-overflow-hidden uk-light"
+    data-uk-height-viewport>
+
+    {{>navbar}}
+    {{>banner}}
+
+    {{#if loggedIn}}
+
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-center">
+            <div class="uk-width-expand">
+                <div>
+                    <h3 class="uk-heading-line uk-text-bold"><span>Vibe Check</span></h3>
+                    <article class="uk-section uk-section-small uk-padding-remove-top">
+                        <form id="mood-form">
+                            <h2>What was the vibe today{{ name }}?
+                            </h2>
+                            <select class="uk-width-1-1 uk-text-large uk-txt-bold" uk-dropdown="mode: click" name="vibe-check" id="vibe-check">
+                                <option value="Happy">Happy</option>
+                                <option value="">Tired</option>
+                                <option value="Angry">Angry</option>
+                                <option value="Sad">Sad</option>
+                                <option value="Irritable">Irritable</option>
+                                <option value="Tired">Tired</option>
+                                <option value="Anxious">Anxious</option>
+                            </select>
+
+                                <button class="uk-margin-top uk-button-small uk-button-default uk-width-1-1 uk-text-large uk-txt-bold" type="submit" id="submit-mood">Confirm Vibe</button>
+
+
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    {{!-- Questions --}}
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-center">
+            <div class="uk-width-expand">
+                <div>
+                    <h3 class="uk-heading-line uk-text-bold"><span>Daily Questions</span></h3>
+                    <article class="uk-section uk-section-small uk-padding-remove-top">
+                        <header>
+                            <h2>Explain why or what events led you to feel this way?</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <h2>Today I accomplished...</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <h2>I had a positive experience with...</h2>
+                            <label for="todays-notes"></label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+                        </header>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="uk-section uk-section-dark">
+        <div class="uk-container uk-flex uk-flex-center">
+            <div class="uk-width-expand">
+                <div>
+                    <h3 class="uk-heading-line uk-text-bold"><span>Reflections</span></h3>
+                    <article class="uk-section uk-section-small uk-padding-remove-top">
+                        <header>
+                            <h2>Tell us about your day</h2>
+                            <label for="todays-notes">Notes</label>
+                            <textarea class="uk-textarea" rows="3"></textarea>
+
+                            <button class="uk-margin-top uk-button uk-button-secondary uk-width-1-4"> Submit Entry</button>
+
+                        </header>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{else}}
+
+    {{>tosignin}}
+
+    {{/if}}
+
+
+    {{>footer}} 
+    <script src="/js/logout.js"></script>
+    <script src="/js/mood.js"></script>
+    <script src="/js/entries.js"></script>
+
+
+</body>

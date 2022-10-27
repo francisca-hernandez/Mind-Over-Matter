@@ -21,19 +21,22 @@ const sessionSetting = {
     saveUninitialized: true,
 };
 
-//we setup handlebars and connect it with express
-// app.engine('handlebars', hbs.engine);
-// app.set('view engine', 'handlebars');
+// we setup handlebars and connect it with express
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
-// app.use(session(sessionSetting));
+app.use(session(sessionSetting));
 
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// //body parser
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+//body parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// app.use(routes);
+app.use(routes);
+
+
+
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
