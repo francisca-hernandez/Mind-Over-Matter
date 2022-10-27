@@ -50,11 +50,22 @@ User Story
 
 * UIkit
 * Heroku
-* postman/insomnia 
+* postman/insomnia
+* MySQLWorkbench
 
 ### Screenshot 
-
-
+* Login and Signup Page
+![Login & Sign-up](./public/Images/screenshots/login-signup.png)
+* Homepage: Top of the page
+![Homepage:Part 1](./public/Images/screenshots/homepage1.png)
+* Homepage: Bottom of the page
+![Homepage:Part 2](./public/Images/screenshots/homepage2.png)
+* About Us Page 
+![About Us](./public/Images/screenshots/aboutus.png)
+* Entries page
+![Entries](./public/Images/screenshots/Entries.png)
+* Resources page
+![Resources](./public/Images/screenshots/resources.png)
 
 ### Link to Deployed Application
 
