@@ -45,9 +45,9 @@ router.get('/entries', function(req, res) {
         moods: req.session.mood
     });
   });
-  router.get('/resources', function(req, res) {
+  router.get('/Resources', function(req, res) {
     
-    res.render('resources', {
+    res.render('Resources', {
         loggedIn: req.session.loggedIn,
         moods: req.session.mood
     });
