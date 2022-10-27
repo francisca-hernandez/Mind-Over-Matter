@@ -6,6 +6,16 @@
 
     {{>navbar}}
     {{>banner}}
+    {{#if loggedIn}}
+
+    <div class="uk-position-bottom-center uk-position-small">
+    <a href="/homepage"> <button
+            class="uk-margin-top uk-margin-bottom uk-button uk-button-secondary uk-border-pill uk-width-1-1"> homepage
+        </button></a>
+</div>
+
+    {{else}}
+
     <section class="uk-section uk-section-dark">
         <div class="uk-container uk-flex uk-flex-top uk-flex-center">
             <section class="uk-width-medium uk-padding-small uk-position-z-index" uk-scrollspy="cls: uk-animation-fade">
@@ -34,7 +44,7 @@
                         </div>
                     </fieldset>
                 </form>
-                
+
             </section>
 
             <section>
@@ -74,6 +84,9 @@
             </section>
         </div>
     </section>
+
+    {{/if}}
+
     {{>footer}}
 
     <script src="/js/login.js"></script>
