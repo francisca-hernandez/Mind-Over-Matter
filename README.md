@@ -1,6 +1,6 @@
-# Mind Over Matter
+# Mind-Over-Matter
 
-## Project Description
+## Description
 
 What is this application? 
 * Mental health and wellness tracking application. Includes mental health resources, a daily tracker and prompts you can use to log entries associated with moods for that moment. 
@@ -11,7 +11,18 @@ Why did we create this application?
 User Story
 * AS A USER i want an application THAT includes a daily tracker for my mental health and wellness via mood and journal entries AND provides me with any resources I may need access to including how to find a provider and, who to call in a mental health crisis in my area. 
 
-## Acceptance Criteria
+## Table of Contents
+
+- [Usage](#usage)
+- [Built With](#Builtwith)
+- [Assets](#Assets)
+- [Deployed Application](#installation)
+- [Constributors](#contributors)
+
+## Criteria
+
+* Must have a login, Sign up and logout funtionality
+* Must be able to log a mood and time stamp 
 
 * Must use Node.js and Express.js to create a RESTful API. 
 * Must use Handlebars.js as the template engine. 
@@ -28,32 +39,9 @@ User Story
 * Must meet good-quality coding standards (file structure, best practices, etc.).
 * Must have a professional README (unique name, description, link to the deployed app).
 
-## How to Use 
+## Usage
 
-### Heroku Link
-
-[Click here for the Heroku deployment!](https://mind-over-matter-2.herokuapp.com/)
- 
-## Built Using
-
-* JavaScript
-* HTML
-* CSS 
-* Node.js
-* Node Package Manager
-* NPM Inquirer
-* Express.js
-* Handlebars.js
-* Handlebars-express
-
-## Assets 
-
-* UIkit
-* Heroku
-* postman/insomnia
-* MySQLWorkbench
-
-### Screenshot 
+### Screenshots 
 * Login and Signup Page
 ![Login & Sign-up](./public/Images/screenshots/login-signup.png)
 * Homepage: Top of the page
@@ -66,10 +54,29 @@ User Story
 ![Entries](./public/Images/screenshots/Entries.png)
 * Resources page
 ![Resources](./public/Images/screenshots/resources.png)
+ 
+## Built With 
 
-### Link to Deployed Application
+* JavaScript
+* HTML
+* CSS 
+* Node.js
+* Node Package Manager
+* NPM Inquirer
+* Express.js
+* Handlebars.js
+* Handlebars-express
 
-This site was build using [Github Respository](https://github.com/francisca-hernandez/Mind-Over-Matter) & deployed using [Heroku](https://mind-over-matter-2.herokuapp.com/)
+### Assets 
+
+* UIkit
+* Heroku
+* postman/insomnia
+* MySQLWorkbench
+
+## Deployed Application
+
+This site was built using [Github Respository](https://github.com/francisca-hernandez/Mind-Over-Matter) & deployed using [Heroku](https://mind-over-matter-2.herokuapp.com/)
 
 ## Contributers
 
@@ -78,5 +85,19 @@ This site was build using [Github Respository](https://github.com/francisca-hern
 * Joseph Hernandez
 * David Ricksgers
 
+
+
+
+
+
+
+
+
+
+
+
+## Features
+
+If your project has a lot of features, list them here.
 
 
