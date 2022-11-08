@@ -17,7 +17,7 @@ User Story
 - [Built With](#Builtwith)
 - [Assets](#Assets)
 - [Deployed Application](#installation)
-- [Constributors](#contributors)
+- [Contributors](#contributors)
 
 ## Criteria
 
